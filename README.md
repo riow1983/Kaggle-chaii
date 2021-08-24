@@ -55,7 +55,7 @@ https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering<br>
 #### Blogs / Qiita / etc.
 |name|url|status|comment|
 |----|----|----|----|
-|BERT入門|[URL](https://www.slideshare.net/matsukenbook/bert-217710964)|Done|Kaggle inference時 (=internetオフ時),<br>:huggingface transformersのメタファイルを取得する方針が参考になった|
+|BERT入門|[URL](https://www.slideshare.net/matsukenbook/bert-217710964)|Done|Kaggle inference時 (=internetオフ時),<br>:huggingface: transformersのメタファイルを取得する方針が参考になった|
 <br>
 
 
@@ -77,6 +77,7 @@ https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering<br>
 
 #### Hugging Face Platform
 |name|url|status|comment|
+|----|----|----|----|
 |bert-base-multilingual-cased|[URL](https://huggingface.co/bert-base-multilingual-cased)|Done|`config.json`, `pytorch_model.bin`, `vocab.txt`を取得|
 <br>
 

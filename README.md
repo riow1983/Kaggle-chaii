@@ -77,6 +77,7 @@ for i in range(0, context_len, max_len-overlap):
 |Question Answering with a fine-tuned BERT|[URL](https://towardsdatascience.com/question-answering-with-a-fine-tuned-bert-bc4dafd45626)|Done|fine-tunedということでfine-tuneする実装例ではなく, fine-tune済みのモデルの利用例になっていることに注意|
 |【突然GitHubにpushできなくなった】 トークン生成で解決：The requested URL returned error: 403|[URL](https://zenn.dev/yuri0427/articles/9587ae6a578ee9)|Done|GitHub連携にパスワード方式が使えなくなった2021年8月13日以降はこのトークン方式になる|
 |(:hugs:) ValueError: char_to_token() is not available when using Python based tokenizers|[URL](https://www.gitmemory.com/issue/huggingface/transformers/12201/862549850)|Done|:hugs: `char_to_token`メソッドを使うならfast tokenizerを使うべし|
+|(pandas) pandasでDataFrameのセルにlistを代入する|[URL](https://linus-mk.hatenablog.com/entry/pandas_insert_list_into_cell)|Done|`object`型のSeriesに対して`.at`メソッドを使うべし|
 <br>
 
 
@@ -149,7 +150,12 @@ kagglenb001-chaii-edaを作成.
 
 #### 2021-08-24
 kagglenb001-chaii-edaによるsubmit完了.
+<br>
+<br>
+<br>
 
+#### 2021-09-13
+localnb002-fine-tuneのpreprocessingコードがようやくひと段落し, train開始.
 
 
 

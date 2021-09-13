@@ -33,6 +33,8 @@ https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering<br>
 |----|----|----|----|----|----|
 |localnb001-export-transformers|-|-|[localnb001-export-transformers](https://www.kaggle.com/riow1983/localnb001-export-transformers)|Done|`bert-base-multilingual-cased`のファイルをKaggle Datasetとしてexport|
 |kagglenb001-chaii-eda|-|[localnb001-export-transformers](https://www.kaggle.com/riow1983/localnb001-export-transformers)|submission.csv|Done|`bert-base-multilingual-cased`による予測 (w/o fine-tuning)|
+|localnb002-fine-tune|[URL](https://github.com/riow1983/Kaggle-chaii/blob/master/notebooks/localnb002-fine-tune.ipynb)|`../input/chaii-hindi-and-tamil-question-answering/train.csv`|localnb002|Done|`bert-base-multilingual-cased`のfine-tuning|
+|l2knb001-fine-tune|[URL](https://www.kaggle.com/riow1983/l2knb001-fine-tune)|localnb001, localnb002|submission.csv|作成中|fine-tuned `bert-base-multilingual-cased`によるinference|
 <br>
 
 

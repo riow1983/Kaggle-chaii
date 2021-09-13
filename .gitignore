@@ -15,6 +15,7 @@ pytorch-xla-env-setup.py
 /input/
 /notebooks/localnb001-export-transformers/
 /notebooks/setup_kaggle.ipynb
+/notebooks/l2knb001-fine-tune/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

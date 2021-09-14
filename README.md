@@ -12,6 +12,8 @@ https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering<br>
 |commitSHA|comment|Local CV|Public LB|
 |----|----|----|----|
 |-|-|-|0.0010|
+|6bb70140768d5dec90205db8b0568746124f5568|for loop incorporated in the function for memory efficiency|-|Error|
+|8c807fec919722adf8eacb7822ddbfd3c0627487|sentence seperation deprecated|-|0.002|
 <br>
 
 ## Late Submissions
@@ -44,10 +46,8 @@ https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering<br>
 ***
 ## 参考資料
 #### Snipets
-<br>
-
 ```python
-# huggingfaceをPyTorch nn.Moduleで訓練した後saveする方法:
+# huggingface modelをPyTorch nn.Moduleで訓練した後save (& load) する方法:
 # reference: https://github.com/riow1983/Kaggle-Coleridge-Initiative#2021-04-25
 model = MyModel(num_classes).to(device)
 optimizer = AdamW(model.parameters(), lr=2e-5, weight_decay=1e-2)

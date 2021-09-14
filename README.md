@@ -23,9 +23,9 @@ https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering<br>
 ## My Assets
 [notebook命名規則]  
 - kagglenb001-hoge.ipynb: Kaggle platform上で新規作成されたKaggle notebook (kernel).
-- nb001-hoge.ipynb: kagglenb001-hoge.ipynbをlocalにpullしlocalで変更を加えるもの. 番号はkagglenb001-hoge.ipynbと共通.
 - localnb001-hoge.ipynb: localで新規作成されたnotebook. 
-- l2knb001-hoge.ipynb: localnb001-hoge.ipynbをKaggle platformにpushしたもの. 番号はlocalnb001-hoge.ipynbと共通.
+- k2lnb001-hoge.ipynb: kagglenb001-hoge.ipynbをlocalにpullしlocalで変更を加えるもの.
+- l2knb001-hoge.ipynb: localnb001-hoge.ipynbをKaggle platformにpushしたもの.
 
 #### Code
 作成したnotebook等の説明  
@@ -46,6 +46,29 @@ https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering<br>
 #### Snipets
 <br>
 
+```python
+# huggingfaceをPyTorch nn.Moduleで訓練した後saveする方法:
+# reference: https://github.com/riow1983/Kaggle-Coleridge-Initiative#2021-04-25
+model = MyModel(num_classes).to(device)
+optimizer = AdamW(model.parameters(), lr=2e-5, weight_decay=1e-2)
+output_model = './models/model_hoge.pth'
+
+# save
+def save(model, optimizer):
+    # save
+    torch.save({
+        'model_state_dict': model.state_dict(),
+        'optimizer_state_dict': optimizer.state_dict()
+    }, output_model)
+
+save(model, optimizer)
+
+# load
+checkpoint = torch.load(output_model, map_location='cpu')
+model.load_state_dict(checkpoint['model_state_dict'])
+optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+```
+<br>
 ```python
 # オーバーラップを確保しながら特定長のシーケンスを得るためのポジションを取得するループ
 
@@ -73,7 +96,7 @@ for i in range(0, context_len, max_len-overlap):
 |----|----|----|----|
 |BERT入門|[URL](https://www.slideshare.net/matsukenbook/bert-217710964)|Done|Kaggle inference時 (=internetオフ時),<br>:hugs: transformersのメタファイルを取得する方針が参考になった|
 |Unicode block|[URL](https://en.wikipedia.org/wiki/Unicode_block)|Done|各言語文字のblock rangeが示されている|
-|iHateRegex|[URL](https://ihateregex.io/expr/hyphen-word-break/)|Done|正規表現の動作確認がブラウザ上でできる|
+|(正規表現) iHateRegex|[URL](https://ihateregex.io/expr/hyphen-word-break/)|Done|正規表現の動作確認がブラウザ上でできる|
 |The Unicode Standard, Version 13.0 > Devanagari|[URL](https://unicode.org/charts/PDF/U0900.pdf)|Done|Devanagariのunicodeの解説書|
 |Adapting BERT question answering for the medical domain|[URL](https://medium.com/analytics-vidhya/adapting-bert-question-answering-for-the-medical-domain-2085ada8ceb1)|Done|Dealing with a long contextセクションに512トークン長以内にcontextを分割する手法が言葉で説明されている|
 |Question Answering with a fine-tuned BERT|[URL](https://towardsdatascience.com/question-answering-with-a-fine-tuned-bert-bc4dafd45626)|Done|fine-tunedということでfine-tuneする実装例ではなく, fine-tune済みのモデルの利用例になっていることに注意|
@@ -101,11 +124,13 @@ for i in range(0, context_len, max_len-overlap):
 |BERT tokenizer & model download|[URL](https://stackoverflow.com/questions/59701981/bert-tokenizer-model-download)|Done|:hugs: transformersのメタファイルをダウンロードする例.<br>ただし最近は格納先がHugging Face Platformに変更になった模様.|
 |python pandas: apply a function with arguments to a series|[URL](https://stackoverflow.com/questions/12182744/python-pandas-apply-a-function-with-arguments-to-a-series)|Done|apply対象の関数への引数の渡し方|
 |Python: Find a substring in a string and returning the index of the substring|[URL](https://stackoverflow.com/questions/21842885/python-find-a-substring-in-a-string-and-returning-the-index-of-the-substring)|Done|`string`型のfindメソッドでできる|
+|(pandas) Pandas drop duplicates on one column and keep only rows with the most frequent value in another column|[URL](https://stackoverflow.com/questions/63319148/pandas-drop-duplicates-on-one-column-and-keep-only-rows-with-the-most-frequent-v)|Done|出現回数が最頻のものを残してdrop duplicatesする方法|
 
 
 #### GitHub
 |name|url|status|comment|
 |----|----|----|----|
+|Kaggle-Coleridge-Initiative|[URL](https://github.com/riow1983/Kaggle-Coleridge-Initiative)|Done|Coleridgeコンペ時につけていたKagge日記|
 |個人アクセストークンを使用する|[URL](https://docs.github.com/ja/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)|Done|GitHub連携にパスワード方式が使えなくなった2021年8月13日以降はこのトークン方式になる|
 |(PyTorch) How to slice a BatchEncoding object into desired batch sizes?|[URL](https://github.com/huggingface/tokenizers/issues/577)|Done|`tokenizer`はbatchにしたtextを受け取れる仕様|
 <br>

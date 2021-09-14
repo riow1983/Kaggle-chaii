@@ -68,7 +68,6 @@ checkpoint = torch.load(output_model, map_location='cpu')
 model.load_state_dict(checkpoint['model_state_dict'])
 optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
 ```
-<br>
 ```python
 # オーバーラップを確保しながら特定長のシーケンスを得るためのポジションを取得するループ
 
@@ -81,7 +80,6 @@ for i in range(0, context_len, max_len-overlap):
     print("end_position:", min(i + max_len, context_len-1))
     print()
 ```
-<br>
 
 
 #### Papers

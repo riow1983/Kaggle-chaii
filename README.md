@@ -183,6 +183,18 @@ kagglenb001-chaii-edaによるsubmit完了.
 
 #### 2021-09-13
 localnb002-fine-tuneのpreprocessingコードがようやくひと段落し, train開始.
+<br>
+<br>
+<br>
+
+#### 2021-09-14
+fine-tuned mBERTでsubmitするもzero-shotよりもLB悪化(0.010 -> 0.002).<br>
+inferenceをpiplineで実施していたが, [torch-nativeな方法](https://huggingface.co/transformers/task_summary.html#extractive-question-answering)も試したい.<br>
+その他アイデア:
+- mBERTの枠組みで, Hindi Question - Tamil Answer など自動翻訳などを利用してdata augmentationしてtrainする
+<br>
+<br>
+<br>
 
 
 

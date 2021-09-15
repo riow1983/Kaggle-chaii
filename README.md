@@ -11,7 +11,7 @@ https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering<br>
 ## 実験管理テーブル
 |commitSHA|comment|Local CV|Public LB|
 |----|----|----|----|
-|-|-|-|0.0010|
+|-|-|-|0.010|
 |6bb70140768d5dec90205db8b0568746124f5568|for loop incorporated in the function for memory efficiency|-|Error|
 |8c807fec919722adf8eacb7822ddbfd3c0627487|sentence seperation deprecated|-|0.002|
 |aa0b23e093ebbc085a56e354e764d95c3b31bb9f|replaced pipeline w/ torch-native way in the inference loop|-|0.005|
@@ -36,8 +36,8 @@ https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering<br>
 作成したnotebook等の説明  
 |name|url|input|output|status|comment|
 |----|----|----|----|----|----|
-|localnb001-export-transformers|-|-|[localnb001-export-transformers](https://www.kaggle.com/riow1983/localnb001-export-transformers)|Done|`bert-base-multilingual-cased`のファイルをKaggle Datasetとしてexport|
-|kagglenb001-chaii-eda|-|[localnb001-export-transformers](https://www.kaggle.com/riow1983/localnb001-export-transformers)|submission.csv|Done|`bert-base-multilingual-cased`による予測 (w/o fine-tuning)|
+|localnb001-export-transformers|[URL](https://github.com/riow1983/Kaggle-chaii/blob/master/notebooks/localnb001-export-transformers.ipynb)|-|[localnb001-export-transformers](https://www.kaggle.com/riow1983/localnb001-export-transformers)|Done|`bert-base-multilingual-cased`のファイルをKaggle Datasetとしてexport|
+|kagglenb001-chaii-eda|[URL](https://www.kaggle.com/riow1983/kagglenb001-chaii-eda)|[localnb001-export-transformers](https://www.kaggle.com/riow1983/localnb001-export-transformers)|submission.csv|Done|`bert-base-multilingual-cased`による予測 (w/o fine-tuning)|
 |localnb002-fine-tune|[URL](https://github.com/riow1983/Kaggle-chaii/blob/master/notebooks/localnb002-fine-tune.ipynb)|`../input/chaii-hindi-and-tamil-question-answering/train.csv`|localnb002|Done|`bert-base-multilingual-cased`のfine-tuning|
 |l2knb001-fine-tune|[URL](https://www.kaggle.com/riow1983/l2knb001-fine-tune)|localnb001, localnb002|submission.csv|作成中|fine-tuned `bert-base-multilingual-cased`によるinference|
 |kagglenb002-fine-tune|[URL](https://www.kaggle.com/riow1983/kagglenb002-fine-tune)|localnbf001, localnb002|submission.csv|作成中|kagglenb001をベースにしたfine-tuned `bert-base-multilingual-cased`によるinference|
@@ -119,6 +119,7 @@ for i in range(0, context_len, max_len-overlap):
 |(:hugs:) BERT|[URL](https://huggingface.co/transformers/model_doc/bert.html?highlight=bertforquestionanswering#berttokenizer)|参照中|:hugs:BERTメインページ|
 |(:hugs:) Tokenizer|[URL](https://huggingface.co/transformers/main_classes/tokenizer.html#tokenizer)|参照中|:hugs:Tokenizerメインページ|
 |(:hugs:) Preprocessing data|[URL](https://huggingface.co/transformers/preprocessing.html)|参照中|tokenizerにbatch sentence Aとbatch sentence Bを入力した場合に出力されるものを確認できる|
+|(:hugs:) Extractive Question Answering|[URL](https://huggingface.co/transformers/task_summary.html#extractive-question-answering)|Done|`pipeline`によるinferenceと`torch`によるinference両者の例がシンプルにまとまっている|
 <br>
 
 #### StackOverflow

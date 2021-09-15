@@ -106,6 +106,7 @@ for i in range(0, context_len, max_len-overlap):
 |【突然GitHubにpushできなくなった】 トークン生成で解決：The requested URL returned error: 403|[URL](https://zenn.dev/yuri0427/articles/9587ae6a578ee9)|Done|GitHub連携にパスワード方式が使えなくなった2021年8月13日以降はこのトークン方式になる|
 |(:hugs:) ValueError: char_to_token() is not available when using Python based tokenizers|[URL](https://www.gitmemory.com/issue/huggingface/transformers/12201/862549850)|Done|:hugs: `char_to_token`メソッドを使うならfast tokenizerを使うべし|
 |(pandas) pandasでDataFrameのセルにlistを代入する|[URL](https://linus-mk.hatenablog.com/entry/pandas_insert_list_into_cell)|Done|`object`型のSeriesに対して`.at`メソッドを使うべし|
+|HTML 特殊文字|[URL](https://qiita.com/inabe49/items/303afa114b0204da8a24)|Done|矢印やギリシア文字などの記法集|
 <br>
 
 
@@ -192,11 +193,11 @@ localnb002-fine-tuneのpreprocessingコードがようやくひと段落し, tra
 <br>
 
 #### 2021-09-14
-fine-tuned mBERTでsubmitするもzero-shotよりもLB悪化(0.010 -> 0.002).<br>
+fine-tuned mBERTでsubmitするもzero-shotよりもLB悪化(0.010 &rArr; 0.002).<br>
 inferenceをpipelineで実施していたが, [torch-nativeな方法](https://huggingface.co/transformers/task_summary.html#extractive-question-answering)も試したい.<br>
 その次何するか:
-- pipeline方式でtrainする際, HindiモデルとTamilモデルに分けてそれぞれでinferenceする
-- Jaccard関数などloss関数に組み込んでちゃんとtrainする
+- pipeline方式でtrainする際, HindiモデルとTamilモデルに分けてそれぞれでinferenceする &rArr; issue#2
+- Jaccard関数などloss関数に組み込んでちゃんとtrainする &rArr; issue#3
 - mBERTの枠組みで, Hindi Question - Tamil Answer など自動翻訳などを利用してdata augmentationしてtrainする
 - Hindi - Tamil に特化したpre-trainedモデルが利用できる形でどこかに落ちてないか
 - 諦めてホストのtutorial notebookの軍門に下るか
@@ -215,7 +216,9 @@ inferenceをpipelineで実施していたが, [torch-nativeな方法](https://hu
 |l2knb001-fine-tune|torch-native(コンテキスト分割)|Yes|pipeline|Error|
 |l2knb001-fine-tune|torch-native(コンテキスト分割)|Yes|torch-native|0.005|
 |kagglenb001-chaii-eda|-|No|pipeline|0.010|
-|kagglenb001-chaii-eda|pipeline(コンテキストそのまま)|No|pipeline|0.005|
+|kagglenb001-chaii-eda|~~pipeline(コンテキストそのまま)~~ -<br>trainしていたと思いきやしていなかった|No|pipeline|0.005|
+<br>
+kagglenb001-chaii-edaについては２回submitしているがいずれもfine-tuningしていないものである. にも関わらずLBが異なっているのはモデルのランダム性が起因しているものと思われる. (pre-trainedモデルをロードする度にoutput(answer span)が変化することは確認した.)
 
 
 

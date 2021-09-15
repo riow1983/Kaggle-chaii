@@ -107,6 +107,7 @@ for i in range(0, context_len, max_len-overlap):
 |(:hugs:) ValueError: char_to_token() is not available when using Python based tokenizers|[URL](https://www.gitmemory.com/issue/huggingface/transformers/12201/862549850)|Done|:hugs: `char_to_token`メソッドを使うならfast tokenizerを使うべし|
 |(pandas) pandasでDataFrameのセルにlistを代入する|[URL](https://linus-mk.hatenablog.com/entry/pandas_insert_list_into_cell)|Done|`object`型のSeriesに対して`.at`メソッドを使うべし|
 |HTML 特殊文字|[URL](https://qiita.com/inabe49/items/303afa114b0204da8a24)|Done|矢印やギリシア文字などの記法集|
+|pandasでjsonlを扱いたい時|[URL](https://qiita.com/meshidenn/items/3ff72396fe85044bc74f)|Done|jsonlとは|
 <br>
 
 
@@ -196,11 +197,11 @@ localnb002-fine-tuneのpreprocessingコードがようやくひと段落し, tra
 fine-tuned mBERTでsubmitするもzero-shotよりもLB悪化(0.010 &rArr; 0.002).<br>
 inferenceをpipelineで実施していたが, [torch-nativeな方法](https://huggingface.co/transformers/task_summary.html#extractive-question-answering)も試したい.<br>
 その次何するか:
-- pipeline方式でtrainする際, HindiモデルとTamilモデルに分けてそれぞれでinferenceする &rArr; issue#2
-- Jaccard関数などloss関数に組み込んでちゃんとtrainする &rArr; issue#3
+- pipeline方式でtrainする際, HindiモデルとTamilモデルに分けてそれぞれでinferenceする &rArr; [issue#2](https://github.com/riow1983/Kaggle-chaii/issues/2)
+- Jaccard関数などloss関数に組み込んでちゃんとtrainする &rArr; [issue#3](https://github.com/riow1983/Kaggle-chaii/issues/3)
 - mBERTの枠組みで, Hindi Question - Tamil Answer など自動翻訳などを利用してdata augmentationしてtrainする
 - Hindi - Tamil に特化したpre-trainedモデルが利用できる形でどこかに落ちてないか
-- 諦めてホストのtutorial notebookの軍門に下るか
+- 諦めてホストのtutorial notebookの軍門に下るか &rArr; [issue#4](https://github.com/riow1983/Kaggle-chaii/issues/4)
 <br>
 <br>
 <br>

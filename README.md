@@ -14,6 +14,9 @@ https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering<br>
 |-|-|-|0.0010|
 |6bb70140768d5dec90205db8b0568746124f5568|for loop incorporated in the function for memory efficiency|-|Error|
 |8c807fec919722adf8eacb7822ddbfd3c0627487|sentence seperation deprecated|-|0.002|
+|aa0b23e093ebbc085a56e354e764d95c3b31bb9f|replaced pipeline w/ torch-native way in the inference loop|-|0.005|
+|9c381dbda9b2e142ab2ea1f32fcda596f4eb28d0|replaced pipeline w/ torch-native way in the inference loop|-|0.005|
+|c85cec65d19ea00a6942e63934cd7f1288bc2460|pre-trained model (mBERT) w/ fine-tuning being done on this notebook|-|0.005|
 <br>
 
 ## Late Submissions

@@ -189,12 +189,29 @@ localnb002-fine-tuneのpreprocessingコードがようやくひと段落し, tra
 
 #### 2021-09-14
 fine-tuned mBERTでsubmitするもzero-shotよりもLB悪化(0.010 -> 0.002).<br>
-inferenceをpiplineで実施していたが, [torch-nativeな方法](https://huggingface.co/transformers/task_summary.html#extractive-question-answering)も試したい.<br>
-その他アイデア:
+inferenceをpipelineで実施していたが, [torch-nativeな方法](https://huggingface.co/transformers/task_summary.html#extractive-question-answering)も試したい.<br>
+その次何するか:
+- pipeline方式でtrainする際, HindiモデルとTamilモデルに分けてそれぞれでinferenceする
+- Jaccard関数などloss関数に組み込んでちゃんとtrainする
 - mBERTの枠組みで, Hindi Question - Tamil Answer など自動翻訳などを利用してdata augmentationしてtrainする
+- Hindi - Tamil に特化したpre-trainedモデルが利用できる形でどこかに落ちてないか
+- 諦めてホストのtutorial notebookの軍門に下るか
 <br>
 <br>
 <br>
+
+#### 2021-09-15
+>inferenceをpipelineで実施していたが, [torch-nativeな方法](https://huggingface.co/transformers/task_summary.html#extractive-question-answering)も試したい.
+
+について実行した. 結果は以下の通り:
+|Notebook|fine-tuning方式|inference時コンテキスト分割してるか|inference方式|Public LB|
+|----|----|----|----|----|
+|kagglenb002-fine-tune|torch-native(コンテキスト分割)|No|pipeline|0.002|
+|kagglenb002-fine-tune|torch-native(コンテキスト分割)|No|torch-native|0.005|
+|l2knb001-fine-tune|torch-native(コンテキスト分割)|Yes|pipeline|Error|
+|l2knb001-fine-tune|torch-native(コンテキスト分割)|Yes|torch-native|0.005|
+|kagglenb001-chaii-eda|-|No|pipeline|0.010|
+|kagglenb001-chaii-eda|pipeline(コンテキストそのまま)|No|pipeline|0.005|
 
 
 

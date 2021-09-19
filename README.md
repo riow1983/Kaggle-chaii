@@ -17,6 +17,7 @@ https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering<br>
 |aa0b23e093ebbc085a56e354e764d95c3b31bb9f|replaced pipeline w/ torch-native way in the inference loop|-|0.005|
 |9c381dbda9b2e142ab2ea1f32fcda596f4eb28d0|replaced pipeline w/ torch-native way in the inference loop|-|0.005|
 |c85cec65d19ea00a6942e63934cd7f1288bc2460|pre-trained model (mBERT) w/ fine-tuning being done on this notebook|-|0.005|
+|f4d2f7179bc1bc0c11bb03558ccf19a6a0ee3a00|indi-bert w/o fine-tuning|-|0.006|
 <br>
 
 ## Late Submissions
@@ -37,7 +38,7 @@ https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering<br>
 |name|url|input|output|status|comment|
 |----|----|----|----|----|----|
 |localnb001-export-transformers|[URL](https://github.com/riow1983/Kaggle-chaii/blob/master/notebooks/localnb001-export-transformers.ipynb)|-|[localnb001-export-transformers](https://www.kaggle.com/riow1983/localnb001-export-transformers)|Done|`bert-base-multilingual-cased`のファイルをKaggle Datasetとしてexport|
-|kagglenb001-chaii-eda|[URL](https://www.kaggle.com/riow1983/kagglenb001-chaii-eda)|[localnb001-export-transformers](https://www.kaggle.com/riow1983/localnb001-export-transformers)|submission.csv|Done|`bert-base-multilingual-cased`による予測 (w/o fine-tuning)|
+|kagglenb001-chaii-eda|[URL](https://www.kaggle.com/riow1983/kagglenb001-chaii-eda)|[localnb001-export-transformers](https://www.kaggle.com/riow1983/localnb001-export-transformers)<br>[indic-bert](https://www.kaggle.com/ajax0564/indicbert)|submission.csv|Done|`bert-base-multilingual-cased`による予測 (w/o fine-tuning)|
 |localnb002-fine-tune|[URL](https://github.com/riow1983/Kaggle-chaii/blob/master/notebooks/localnb002-fine-tune.ipynb)|`../input/chaii-hindi-and-tamil-question-answering/train.csv`|localnb002|Done|`bert-base-multilingual-cased`のfine-tuning|
 |l2knb001-fine-tune|[URL](https://www.kaggle.com/riow1983/l2knb001-fine-tune)|localnb001, localnb002|submission.csv|作成中|fine-tuned `bert-base-multilingual-cased`によるinference|
 |kagglenb002-fine-tune|[URL](https://www.kaggle.com/riow1983/kagglenb002-fine-tune)|localnbf001, localnb002|submission.csv|作成中|kagglenb001をベースにしたfine-tuned `bert-base-multilingual-cased`によるinference|

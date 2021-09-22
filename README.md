@@ -18,6 +18,7 @@ https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering<br>
 |9c381dbda9b2e142ab2ea1f32fcda596f4eb28d0|replaced pipeline w/ torch-native way in the inference loop|-|0.005|
 |c85cec65d19ea00a6942e63934cd7f1288bc2460|pre-trained model (mBERT) w/ fine-tuning being done on this notebook|-|0.005|
 |f4d2f7179bc1bc0c11bb03558ccf19a6a0ee3a00|indi-bert w/o fine-tuning|-|0.006|
+|d421e45e0d00c77123ed61e7fef6b680aae9f19d|xlm-roberta-large-squad2 w/o fine-tuning|-|0.571|
 <br>
 
 ## Late Submissions

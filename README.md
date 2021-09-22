@@ -92,6 +92,7 @@ for i in range(0, context_len, max_len-overlap):
 |name|url|status|comment|
 |----|----|----|----|
 |BERT Based Multilingual Machine Comprehension in English and Hindi|[URL](https://arxiv.org/pdf/2006.01432.pdf)|未読|-|
+|Unsupervised Cross-lingual Representation Learning at Scale|[URL](https://arxiv.org/pdf/1911.02116.pdf)|未読|XLM-RoBERTaの論文|
 <br>
 
 
@@ -120,6 +121,8 @@ for i in range(0, context_len, max_len-overlap):
 |(PyTorch) DATASETS & DATALOADERS|[URL](https://pytorch.org/tutorials/beginner/basics/data_tutorial.html)|参照中|PyTorch Dataset, DataLoaderの公式実装解説|
 |(PyTorch) Custom loss functions|[URL](https://discuss.pytorch.org/t/custom-loss-functions/29387)|Done|PyTorchでCustom loss functionを実装する方法|
 |(:hugs:) BERT|[URL](https://huggingface.co/transformers/model_doc/bert.html?highlight=bertforquestionanswering#berttokenizer)|参照中|:hugs:BERTメインページ|
+|(:hugs:) RoBERTa|[URL](https://huggingface.co/transformers/model_doc/roberta.html)|参照中|:hugs:RoBERTaメインページ|
+|(:hugs:) XLM-RoBERTa|[URL](https://huggingface.co/transformers/model_doc/xlmroberta.html)|参照中|:hugs:XLM-RoBERTaメインページ|
 |(:hugs:) Tokenizer|[URL](https://huggingface.co/transformers/main_classes/tokenizer.html#tokenizer)|参照中|:hugs:Tokenizerメインページ|
 |(:hugs:) Preprocessing data|[URL](https://huggingface.co/transformers/preprocessing.html)|参照中|tokenizerにbatch sentence Aとbatch sentence Bを入力した場合に出力されるものを確認できる|
 |(:hugs:) Extractive Question Answering|[URL](https://huggingface.co/transformers/task_summary.html#extractive-question-answering)|Done|`pipeline`によるinferenceと`torch`によるinference両者の例がシンプルにまとまっている|
@@ -140,24 +143,29 @@ for i in range(0, context_len, max_len-overlap):
 |Kaggle-Coleridge-Initiative|[URL](https://github.com/riow1983/Kaggle-Coleridge-Initiative)|Done|Coleridgeコンペ時につけていたKagge日記|
 |個人アクセストークンを使用する|[URL](https://docs.github.com/ja/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)|Done|GitHub連携にパスワード方式が使えなくなった2021年8月13日以降はこのトークン方式になる|
 |(PyTorch) How to slice a BatchEncoding object into desired batch sizes?|[URL](https://github.com/huggingface/tokenizers/issues/577)|Done|`tokenizer`はbatchにしたtextを受け取れる仕様|
+|IndicBERT|[URL](https://github.com/AI4Bharat/indic-bert)|未確認|[ai4bharat/indic-bert](https://huggingface.co/ai4bharat/indic-bert)にfine-tuneing cliが付いたもの(?)|
 <br>
 
 #### Hugging Face Platform
 |name|url|status|comment|
 |----|----|----|----|
-|bert-base-multilingual-cased|[URL](https://huggingface.co/bert-base-multilingual-cased)|Done|`config.json`, `pytorch_model.bin`, `vocab.txt`を取得|
+|bert-base-multilingual-cased|[URL](https://huggingface.co/bert-base-multilingual-cased)|Done|`config.json`, `pytorch_model.bin`, `vocab.txt`を取得<br>kagglenb001-chaii-edaにて使用|
+|ai4bharat/indic-bert|[URL](https://huggingface.co/ai4bharat/indic-bert)|Done|kagglenb001-chaii-edaにて使用|
+|deepset/xlm-roberta-large-squad2|[URL](https://huggingface.co/deepset/xlm-roberta-large-squad2)|Done|kagglenb001-chaii-edaにて使用|
 <br>
 
 #### Kaggle Notebooks
 |name|url|status|comment|
 |----|----|----|----|
 |coleridge_regex_electra|[URL](https://www.kaggle.com/nbroad/no-training-question-answering-model/data?scriptVersionId=66240356)|参考|Coleridgeコンペの47th solution.<br>transformers pipelineを使ったQA実装例が非常に分かりやすく, 本コンペでも参考とした.|
+|chaii-QA: multi-lingual pretrained baseline|[URL](https://www.kaggle.com/nbroad/chaii-qa-multi-lingual-pretrained-baseline)|参照中|:hugs:製マルチリンガル系pre-trainedモデルをpipelineメソッドで実行のうえsubmitしてみた結果`xlm-roberta-large-squad2`が最良とのこと|
 <br>
 
 
 #### Kaggle Datasets
 |name|url|status|comment|
 |----|----|----|----|
+|xlm roberta squad2|[URL](https://www.kaggle.com/nbroad/xlm-roberta-squad2)|Done|[deepset/xlm-roberta-large-squad2](deepset/xlm-roberta-large-squad2)をダウンロードしたもの|
 <br>
 
 #### Kaggle Discussion

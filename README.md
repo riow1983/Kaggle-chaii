@@ -136,6 +136,7 @@ for i in range(0, context_len, max_len-overlap):
 |python pandas: apply a function with arguments to a series|[URL](https://stackoverflow.com/questions/12182744/python-pandas-apply-a-function-with-arguments-to-a-series)|Done|apply対象の関数への引数の渡し方|
 |Python: Find a substring in a string and returning the index of the substring|[URL](https://stackoverflow.com/questions/21842885/python-find-a-substring-in-a-string-and-returning-the-index-of-the-substring)|Done|`string`型のfindメソッドでできる|
 |(pandas) Pandas drop duplicates on one column and keep only rows with the most frequent value in another column|[URL](https://stackoverflow.com/questions/63319148/pandas-drop-duplicates-on-one-column-and-keep-only-rows-with-the-most-frequent-v)|Done|出現回数が最頻のものを残してdrop duplicatesする方法|
+|(:hugs:) Transformers v4.x: Convert slow tokenizer to fast tokenizer|[URL](https://stackoverflow.com/questions/65431837/transformers-v4-x-convert-slow-tokenizer-to-fast-tokenizer)|Done|`XLMRobertaTokenizer`を使用するためには`pip install transformers[sentencepiece]`としてやる必要あり|
 
 
 #### GitHub

@@ -19,6 +19,7 @@ https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering<br>
 |c85cec65d19ea00a6942e63934cd7f1288bc2460|pre-trained model (mBERT) w/ fine-tuning being done on this notebook|-|0.005|
 |f4d2f7179bc1bc0c11bb03558ccf19a6a0ee3a00|indi-bert w/o fine-tuning|-|0.006|
 |d421e45e0d00c77123ed61e7fef6b680aae9f19d|xlm-roberta-large-squad2 w/o fine-tuning|-|0.571|
+|652b874625c0200035e39a79ab8144469b174a58|xlm-roberta-large-squad2 w/ fine-tuning (pipeline inference)|-|0.008|
 <br>
 
 ## Late Submissions
@@ -153,7 +154,7 @@ for i in range(0, context_len, max_len-overlap):
 |----|----|----|----|
 |bert-base-multilingual-cased|[URL](https://huggingface.co/bert-base-multilingual-cased)|Done|`config.json`, `pytorch_model.bin`, `vocab.txt`を取得<br>kagglenb001-chaii-edaにて使用|
 |ai4bharat/indic-bert|[URL](https://huggingface.co/ai4bharat/indic-bert)|Done|kagglenb001-chaii-edaにて使用|
-|deepset/xlm-roberta-large-squad2|[URL](https://huggingface.co/deepset/xlm-roberta-large-squad2)|Done|kagglenb001-chaii-edaにて使用|
+|deepset/xlm-roberta-large-squad2|[URL](https://huggingface.co/deepset/xlm-roberta-large-squad2)|Done|kagglenb001-chaii-edaにて使用.<br>tokenizerには`XLMRobertaTokenizer`を使用していることが[こちら](https://public-mlflow.deepset.ai/#/experiments/124/runs/3a540e3f3ecf4dd98eae8fc6d457ff20)で確認できる<br>|
 <br>
 
 #### Kaggle Notebooks

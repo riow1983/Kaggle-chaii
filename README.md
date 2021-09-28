@@ -20,6 +20,7 @@ https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering<br>
 |f4d2f7179bc1bc0c11bb03558ccf19a6a0ee3a00|indi-bert w/o fine-tuning|-|0.006|
 |d421e45e0d00c77123ed61e7fef6b680aae9f19d|xlm-roberta-large-squad2 w/o fine-tuning|-|0.571|
 |652b874625c0200035e39a79ab8144469b174a58|xlm-roberta-large-squad2 w/ fine-tuning (pipeline inference)|-|0.008|
+|495c5de2a4b7582eccc3da4e1831572255e11004|xlm-roberta-large-squad2 w/ fine-tuning (naive torch inference)|-|Error|
 <br>
 
 ## Late Submissions
@@ -87,6 +88,15 @@ for i in range(0, context_len, max_len-overlap):
     print("end_position:", min(i + max_len, context_len-1))
     print()
 ```
+```python
+# ip_addressごとの最頻出malware_typeを表示するSeriesを取得する方法
+
+def md(s):
+    c = Counter(s)
+    return c.most_common(1)[0][0]
+
+df.groupby('ip_address')['malware_type'].agg(md)
+```
 <br>
 
 
@@ -112,6 +122,7 @@ for i in range(0, context_len, max_len-overlap):
 |(pandas) pandasでDataFrameのセルにlistを代入する|[URL](https://linus-mk.hatenablog.com/entry/pandas_insert_list_into_cell)|Done|`object`型のSeriesに対して`.at`メソッドを使うべし|
 |HTML 特殊文字|[URL](https://qiita.com/inabe49/items/303afa114b0204da8a24)|Done|矢印やギリシア文字などの記法集|
 |pandasでjsonlを扱いたい時|[URL](https://qiita.com/meshidenn/items/3ff72396fe85044bc74f)|Done|jsonlとは|
+|エラーを出さずに最頻値を得たいとき|[URL](https://qiita.com/tmitani/items/bd77eb08f1da7c283fed)|Done|statistics.modeではエラーになる局面もcollections.Counterで解決可能|
 <br>
 
 

@@ -21,6 +21,8 @@ https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering<br>
 |d421e45e0d00c77123ed61e7fef6b680aae9f19d|xlm-roberta-large-squad2 w/o fine-tuning|-|0.571|
 |652b874625c0200035e39a79ab8144469b174a58|xlm-roberta-large-squad2 w/ fine-tuning (pipeline inference)|-|0.008|
 |495c5de2a4b7582eccc3da4e1831572255e11004|xlm-roberta-large-squad2 w/ fine-tuning (naive torch inference)|-|Error|
+|30955f14a9a0da8823b9e68df53443505ccacd96|copy & paste|-|0.792|
+|5097e95f17ac09bb806088ba626ddb33f180ce5e|huggingface trainer API example reproduced faithfully|0.654|0.728|
 <br>
 
 ## Late Submissions
@@ -45,6 +47,10 @@ https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering<br>
 |localnb002-fine-tune|[URL](https://github.com/riow1983/Kaggle-chaii/blob/master/notebooks/localnb002-fine-tune.ipynb)|`../input/chaii-hindi-and-tamil-question-answering/train.csv`|localnb002|Done|`bert-base-multilingual-cased`のfine-tuning|
 |l2knb001-fine-tune|[URL](https://www.kaggle.com/riow1983/l2knb001-fine-tune)|localnb001, localnb002|submission.csv|作成中|fine-tuned `bert-base-multilingual-cased`によるinference|
 |kagglenb002-fine-tune|[URL](https://www.kaggle.com/riow1983/kagglenb002-fine-tune)|localnbf001, localnb002|submission.csv|作成中|kagglenb001をベースにしたfine-tuned `bert-base-multilingual-cased`によるinference|
+|reproduction-of-0-792-notebook|[URL](https://www.kaggle.com/riow1983/reproduction-of-0-792-notebook)|[kishalmandal/5foldsroberta](https://www.kaggle.com/kishalmandal/5foldsroberta), [nguyenduongthanh/xlm-roberta-large-squad-v2](https://www.kaggle.com/nguyenduongthanh/xlm-roberta-large-squad-v2)|submission.csv|Done|[Reproduction of 0.792 notebook](https://www.kaggle.com/tkm2261/reproduction-of-0-792-notebook)のコピー|
+|ChAII - EDA & Baseline|[URL](https://www.kaggle.com/riow1983/chaii-eda-baseline)|[thedrcat/hf-datasets](https://www.kaggle.com/thedrcat/hf-datasets), [nbroad/xlm-roberta-squad2](https://www.kaggle.com/nbroad/xlm-roberta-squad2)|chaii-bert-trained, chaii-qa, runs, submission.csv|[ChAII - EDA & Baseline](https://www.kaggle.com/thedrcat/chaii-eda-baseline)のコピー|
+|k2lnb001-chaii-eda-baseline-train|-|./input/hf-datasets, ./input/xlm-roberta-squad2|./notebooks/k2lnb001-chaii-eda-baseline-train/chaii-bert-trained, ./notebooks/k2lnb001-chaii-eda-baseline-train/chaii-qa, ./notebooks/k2lnb001-chaii-eda-baseline-train/runs|[ChAII - EDA & Baseline](https://www.kaggle.com/riow1983/chaii-eda-baseline)からinference部分を除外したもの|
+|kagglenb003-chaii-eda-baseline-inference|-|[thedrcat/hf-datasets](https://www.kaggle.com/thedrcat/hf-datasets), [nbroad/xlm-roberta-squad2](https://www.kaggle.com/nbroad/xlm-roberta-squad2), riow1983/k2lnb001-chaii-eda-baseline-train|submission.csv|[ChAII - EDA & Baseline](https://www.kaggle.com/riow1983/chaii-eda-baseline)からtrain部分を除外したもの|
 <br>
 
 

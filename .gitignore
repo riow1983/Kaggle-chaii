@@ -16,6 +16,7 @@ pytorch-xla-env-setup.py
 /notebooks/localnb001-export-transformers/
 /notebooks/setup_kaggle.ipynb
 /notebooks/l2knb001-fine-tune/
+/notebooks/k2lnb001-chaii-eda-baseline-train/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

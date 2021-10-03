@@ -23,6 +23,7 @@ https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering<br>
 |495c5de2a4b7582eccc3da4e1831572255e11004|xlm-roberta-large-squad2 w/ fine-tuning (naive torch inference)|-|Error|
 |30955f14a9a0da8823b9e68df53443505ccacd96|copy & paste|-|0.792|
 |5097e95f17ac09bb806088ba626ddb33f180ce5e|huggingface trainer API example reproduced faithfully|0.654|0.728|
+|e316f40c44c52d204978b2c34a7b66320cb7687e|inference using fine-tuned model trained on Colab w/ 3 epochs|0.655|0.696|
 <br>
 
 ## Late Submissions

@@ -24,6 +24,7 @@ https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering<br>
 |30955f14a9a0da8823b9e68df53443505ccacd96|copy & paste|-|0.792|
 |5097e95f17ac09bb806088ba626ddb33f180ce5e|huggingface trainer API example reproduced faithfully|0.654|0.728|
 |e316f40c44c52d204978b2c34a7b66320cb7687e|inference using fine-tuned model trained on Colab w/ 3 epochs|0.655|0.696|
+|-|--max_length 512 --doc_stride 80 --num_train_epochs 1|0.650|0.719|
 <br>
 
 ## Late Submissions

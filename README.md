@@ -168,6 +168,7 @@ df.groupby('ip_address')['malware_type'].agg(md)
 |個人アクセストークンを使用する|[URL](https://docs.github.com/ja/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)|Done|GitHub連携にパスワード方式が使えなくなった2021年8月13日以降はこのトークン方式になる|
 |(PyTorch) How to slice a BatchEncoding object into desired batch sizes?|[URL](https://github.com/huggingface/tokenizers/issues/577)|Done|`tokenizer`はbatchにしたtextを受け取れる仕様|
 |IndicBERT|[URL](https://github.com/AI4Bharat/indic-bert)|未確認|[ai4bharat/indic-bert](https://huggingface.co/ai4bharat/indic-bert)にfine-tuneing cliが付いたもの(?)|
+|Visualize your 🤗 Hugging Face data with 🏋‍♀️ Weights & Biases|[URL](https://github.com/wandb/examples/blob/master/colabs/huggingface/Visualize_your_Hugging_Face_data_with_Weights_%26_Biases.ipynb)|実行エラー|Colabで実行してみたがデータのロードでエラーが出る|
 <br>
 
 #### Hugging Face Platform
@@ -195,6 +196,9 @@ df.groupby('ip_address')['malware_type'].agg(md)
 #### Kaggle Discussion
 |name|url|status|comment|
 |----|----|----|----|
+|Recipe for winning?|[URL](https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering/discussion/264917#1482290)|Done|学習データのラベルが適当(特にtタミル語)かつデータ量が少ない件について手動アノテーションの有利性に言及したもの.<br>もしくは学習データを一切使わず外部データだけでfine-tuneしたほうがいいという意見も.|
+|Hindi & Tamil QA papers / datasets|[URL](https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering/discussion/264344)|未確認|使えそうな外部データやpre-trainedモデルの紹介|
+|Useful Resources for the competition|[URL](https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering/discussion/264795)|Done|タイトルとは裏腹に学習データのラベルがいい加減だという指摘まとめとそこに起因する倫理的問題についてのディスカッションまとめが秀逸|
 <br>
 
 

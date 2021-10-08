@@ -27,6 +27,7 @@ https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering<br>
 |89a9c10ef578370e83f6ed05d86c24fa9fd4b262|--max_length 512 --doc_stride 80 --num_train_epochs 1|0.650|0.719|
 |3c37a320af36ffe503d4839805c0cb7435601946|--drop_tamil_train true --CV 0.685 --LB 0.708|0.685|0.708|
 |8c3d0c8487e6e7f99dc2277b7cc120259acb80a2|--max_seq_length 512 --doc_stride 80|-|0.775|
+|7a15ddf4444426ad241d591b48610ec83311674a|--ensemble [2,1,1,1,1]|-|0.789|
 <br>
 
 ## Late Submissions
@@ -185,7 +186,7 @@ df.groupby('ip_address')['malware_type'].agg(md)
 |----|----|----|----|
 |coleridge_regex_electra|[URL](https://www.kaggle.com/nbroad/no-training-question-answering-model/data?scriptVersionId=66240356)|参考|Coleridgeコンペの47th solution.<br>transformers pipelineを使ったQA実装例が非常に分かりやすく, 本コンペでも参考とした.|
 |chaii-QA: multi-lingual pretrained baseline|[URL](https://www.kaggle.com/nbroad/chaii-qa-multi-lingual-pretrained-baseline)|参照中|:hugs:製マルチリンガル系pre-trainedモデルをpipelineメソッドで実行のうえsubmitしてみた結果`xlm-roberta-large-squad2`が最良とのこと|
-|Intro to Hugging Face datasets :hugs:|[URL](https://www.kaggle.com/nbroad/intro-to-hugging-face-datasets/notebook)|読了|入力データはtensorを格納した辞書({'input_ids':tensor(), 'attention_mask':tensor(), 'start_positions':tensor(), 'end_positions':tensor()})であれば良い.<br>:hugs: `datasets`はデータ加工にpandasを必要としないほど柔軟性がありそう.|
+|Intro to Hugging Face datasets :hugs:|[URL](https://www.kaggle.com/nbroad/intro-to-hugging-face-datasets/notebook)|読了|入力データはtensorを格納した辞書({'input_ids':tensor(), 'attention_mask':tensor(), 'offset_mapping':tensor(), start_positions':tensor(), 'end_positions':tensor()})であれば良い.<br>:hugs: `datasets`はデータ加工にpandasを必要としないほど柔軟性がありそう.|
 <br>
 
 

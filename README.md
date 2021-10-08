@@ -185,6 +185,7 @@ df.groupby('ip_address')['malware_type'].agg(md)
 |----|----|----|----|
 |coleridge_regex_electra|[URL](https://www.kaggle.com/nbroad/no-training-question-answering-model/data?scriptVersionId=66240356)|参考|Coleridgeコンペの47th solution.<br>transformers pipelineを使ったQA実装例が非常に分かりやすく, 本コンペでも参考とした.|
 |chaii-QA: multi-lingual pretrained baseline|[URL](https://www.kaggle.com/nbroad/chaii-qa-multi-lingual-pretrained-baseline)|参照中|:hugs:製マルチリンガル系pre-trainedモデルをpipelineメソッドで実行のうえsubmitしてみた結果`xlm-roberta-large-squad2`が最良とのこと|
+|Intro to Hugging Face datasets :hugs:|[URL](https://www.kaggle.com/nbroad/intro-to-hugging-face-datasets/notebook)|読了|入力データはtensorを格納した辞書({'input_ids':tensor(), 'attention_mask':tensor(), 'start_positions':tensor(), 'end_positions':tensor()})であれば良い.<br>:hugs: `datasets`はデータ加工にpandasを必要としないほど柔軟性がありそう.|
 <br>
 
 

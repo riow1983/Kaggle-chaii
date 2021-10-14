@@ -17,6 +17,7 @@ pytorch-xla-env-setup.py
 /notebooks/setup_kaggle.ipynb
 /notebooks/l2knb001-fine-tune/
 /notebooks/k2lnb001-chaii-eda-baseline-train/
+/notebooks/chaii-qa-5-fold-xlmroberta-torch-fit/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

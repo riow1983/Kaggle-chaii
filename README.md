@@ -29,6 +29,7 @@ https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering<br>
 |8c3d0c8487e6e7f99dc2277b7cc120259acb80a2|--max_seq_length 512 --doc_stride 80|-|0.775|
 |7a15ddf4444426ad241d591b48610ec83311674a|--ensemble [2,1,1,1,1]|-|0.789|
 |84a040e7d17bb3831a5f9ca5a7d9aa8081352043|--ensemble [1,2,1,1,1]|-|0.787|
+|7495f69317823feeb8824da564a2d3bafad89479|riow1983/chaii-qa-5-fold-xlmroberta-torch-fit-7 used|-|0.770|
 <br>
 
 ## Late Submissions

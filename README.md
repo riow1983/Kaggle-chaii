@@ -31,6 +31,7 @@ https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering<br>
 |84a040e7d17bb3831a5f9ca5a7d9aa8081352043|--ensemble [1,2,1,1,1]|-|0.787|
 |7495f69317823feeb8824da564a2d3bafad89479|riow1983/chaii-qa-5-fold-xlmroberta-torch-fit-7 used|-|0.770|
 |1fae73a8fca470057b8650a6dbc8cd79fbbc2fc0|external data concatenated before 5-fold splitting|-|0.779|
+|5f4c5aa7bb7bfe98f17a61f8ec1704d133a7987d|Models updated (tamil from train dropped)|-|0.771|
 <br>
 
 ## Late Submissions

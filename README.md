@@ -274,6 +274,71 @@ kagglenb001-chaii-edaについては２回submitしているがいずれもfine-
 [what are we learning?](https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering/discussion/267124)
 
 とのことで特にTamil語のtrainの教師ラベルはいい加減らしい. fine-tuningでTamil trainを除外してみようか.
+<br>
+<br>
+<br>
+
+#### 2021-10-19
+[notebooks/chaii-qa-5-fold-xlmroberta-torch-fit.ipynb](https://github.com/riow1983/Kaggle-chaii/blob/master/notebooks/chaii-qa-5-fold-xlmroberta-torch-fit.ipynb)でfoldごとのvalid lossを確認. fold 5でvalid lossが0になっているのはなぜか.<br>
+[inference notebook](https://www.kaggle.com/riow1983/reproduction-of-0-792-notebook/notebook?scriptVersionId=77460400)でfold 5の結果を使用しないsubmitをしてみる. -> LB: 0.783 ＿|￣|○
+
+```
+--------------------------------------------------
+FOLD: 1
+--------------------------------------------------
+----Validation Results Summary----
+Epoch: [0] Valid Loss: 0.62316
+0 Epoch, Best epoch was updated! Valid Loss: 0.62316
+
+----Validation Results Summary----
+Epoch: [1] Valid Loss: 0.71733
+
+
+--------------------------------------------------
+FOLD: 2
+--------------------------------------------------
+----Validation Results Summary----
+Epoch: [0] Valid Loss: 0.57144
+0 Epoch, Best epoch was updated! Valid Loss: 0.57144
+
+----Validation Results Summary----
+Epoch: [1] Valid Loss: 0.70074
+
+
+--------------------------------------------------
+FOLD: 3
+--------------------------------------------------
+----Validation Results Summary----
+Epoch: [0] Valid Loss: 0.63953
+0 Epoch, Best epoch was updated! Valid Loss: 0.63953
+
+----Validation Results Summary----
+Epoch: [1] Valid Loss: 0.77846
+
+
+--------------------------------------------------
+FOLD: 4
+--------------------------------------------------
+----Validation Results Summary----
+Epoch: [0] Valid Loss: 0.62968
+0 Epoch, Best epoch was updated! Valid Loss: 0.62968
+
+----Validation Results Summary----
+Epoch: [1] Valid Loss: 0.73707
+
+
+--------------------------------------------------
+FOLD: 5
+--------------------------------------------------
+----Validation Results Summary----
+Epoch: [0] Valid Loss: 0.00000
+0 Epoch, Best epoch was updated! Valid Loss: 0.00000
+
+----Validation Results Summary----
+Epoch: [1] Valid Loss: 0.00000
+```
+
+またepoch数は1で充分なのかもしれない. これももう一回やってみる?
 
 
 

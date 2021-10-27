@@ -33,6 +33,7 @@ https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering<br>
 |1fae73a8fca470057b8650a6dbc8cd79fbbc2fc0|external data concatenated before 5-fold splitting|-|0.779|
 |5f4c5aa7bb7bfe98f17a61f8ec1704d133a7987d|Models updated (tamil from train dropped)|-|0.771|
 |356b83219e70108a9f6b47e850d640ac4c47e19b|Models updated (2 epochs for all folds)|-|0.783|
+|71fb5c9d5a887da73c784cb70926f8a2b9ba8480|Models updated (1 epoch for all folds)|-|0.772|
 <br>
 
 ## Late Submissions
@@ -338,7 +339,7 @@ Epoch: [0] Valid Loss: 0.00000
 Epoch: [1] Valid Loss: 0.00000
 ```
 
-またepoch数は1で充分なのかもしれない. これももう一回やってみる?
+またepoch数は1で充分なのかもしれない. これももう一回やってみる? -> 0.772 ＿|￣|○
 
 
 

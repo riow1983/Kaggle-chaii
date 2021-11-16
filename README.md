@@ -339,7 +339,62 @@ Epoch: [0] Valid Loss: 0.00000
 Epoch: [1] Valid Loss: 0.00000
 ```
 
-またepoch数は1で充分なのかもしれない. これももう一回やってみる? -> 0.772 ＿|￣|○
+またepoch数は1で充分なのかもしれない. これももう一回やってみる? -> 0.772 ＿|￣|○ 
+<br>
+<br>
+<br>
+
+#### 2021-10-27
+chaii-qa-5-fold-xmroberta-torch-fit.jpynbについて  
+fold 5のときvalid lossが0になる問題を解消するため,  
+max_seq_lengthとdoc_strideを変えて各foldごとのvalid lossを確認する作業に着手.  
+```
+# max_seq_length = 32*13, doc_stride = 32*5
+Fold 1 Valid Loss: 0.59709
+Fold 2 Valid Loss: 0.56930
+Fold 3 Valid Loss: 0.62795
+Fold 4 Valid Loss: 0.62015
+Fold 5 Valid Loss: 0.00000
+
+# max_seq_length = 32*14, doc_stride = 32*6
+Cuda out of memory
+
+# max_seq_length = 32*14, doc_stride = 32*5
+Cuda out of memory
+
+# max_seq_length = 32*14, doc_stride = 32*4
+Cuda out of memory
+
+# max_seq_length = 32*14, doc_stride = 32*3
+Cuda out of memory
+
+# max_seq_length = 32*14, doc_stride = 32*2
+Cuda out of memory
+
+# max_seq_length = 32*14, doc_stride = 32*1
+Cuda out of memory
+
+# max_seq_length = 32*14, doc_stride = 32*0.5
+Cuda out of memory
+
+# max_seq_length = 32*13, doc_stride = 32*6
+Fold 1 Valid Loss: 0.56667
+Fold 2 Valid Loss: 0.54488
+Fold 3 Valid Loss: 0.57748
+Fold 4 Valid Loss: 0.58417
+Fold 5 Valid Loss: 0.00000
+```
+
+#### 2021-11-16
+408/959という結果に終わった.<br>
+なんとsubmitしていたものの中に[銅メダル圏内のもの(private LB: 0.738, public LB: 0.783)](https://www.kaggle.com/riow1983/reproduction-of-0-792-notebook?scriptVersionId=77460400)があったにも関わらずfinal submitに選ぶことができなかった. というのもdead lineの直前(日本時間11月16日午前8時台)にfinal submitをどれにするか考えようと決めていたにも関わらず, 仕事に没入してしまい気付いた時は午前9時30分を回っていたという体たらく.<br>
+9割がた諦めていたとはいえ, こういう経緯でこういう結果になると想像以上の悔しさがあるということが分かった.<br>
+<br>
+3ヶ月という自分の時間の重みとsolo銅メダルを逃してしまった恨みは大きい. この失敗は無駄にしてはいけない. Kaggleへの取り組み方が甘かったと言わざるを得ない. 最終週の土日もKaggleをしなかった. 直前までfinal submitにチェックを付けていなかった. なるようにしてなった結果だと言わざるを得ない. 食らいついてさえいれば銅メダルくらいはどんなコンペでも取れるだろうということも分かった以上, 生活を見直して自分をKaggleラインのライン作業員に仕立て上げなければならない. Kaggle Masterを今後2年以内に取得するための自分の誓約は以下の通りだ:
+- 休憩時間の活動を, 目を使わない活動と目を使う活動に二分する
+- 休憩時間に目を使う活動をする場合, その冒頭はどんな状態であっても必ずKaggleをやる. その後気が散って別のことをやり出すのは一向に構わない.
+- 休憩時間にKaggleをやる気がしない場合は, 目を使わない活動に費やす.
+
 
 
 

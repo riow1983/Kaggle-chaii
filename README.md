@@ -3,7 +3,7 @@
 https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering<br>
 どんなコンペ?:<br>
 開催期間: 2021-08-11 ~ 2021-11-15<br>
-[結果]()<br>  
+[結果](https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering/leaderboard)<br>  
 <br>
 <br>
 <br>

@@ -3,7 +3,7 @@
 https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering<br>
 どんなコンペ?:<br>
 開催期間: 2021-08-11 ~ 2021-11-15<br>
-[結果](https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering/leaderboard)<br>  
+[結果](#2021-11-16)<br>  
 <br>
 <br>
 <br>
@@ -123,6 +123,7 @@ df.groupby('ip_address')['malware_type'].agg(md)
 |BERT Based Multilingual Machine Comprehension in English and Hindi|[URL](https://arxiv.org/pdf/2006.01432.pdf)|未読|-|
 |Unsupervised Cross-lingual Representation Learning at Scale|[URL](https://arxiv.org/pdf/1911.02116.pdf)|未読|XLM-RoBERTaの論文|
 |RETHINKING EMBEDDING COUPLING IN PRE-TRAINED LANGUAGE MODELS|[URL](https://openreview.net/pdf?id=xpFFI_NtgpW)|未読|mBERTの改良版"RemBERT"の論文.<br>XLM-RoBERTaを凌駕. [ディスカッション](https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering/discussion/267827)で取り上げられている.|
+|WECHSEL: Effective initialization of subword embeddings for cross-lingual transfer of monolingual language models|[URL](https://openreview.net/forum?id=JcfISE1-u4)|Done|単言語モデルとしてソース言語からターゲット言語に転移さる新方式.多言語モデルを凌駕.<br>本コンペでも終盤に上位チームが採用. 今後のデファクトスタンダードになるか注目.|
 <br>
 
 
@@ -208,6 +209,7 @@ df.groupby('ip_address')['malware_type'].agg(md)
 |Recipe for winning?|[URL](https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering/discussion/264917#1482290)|Done|学習データのラベルが適当(特にtタミル語)かつデータ量が少ない件について手動アノテーションの有利性に言及したもの.<br>もしくは学習データを一切使わず外部データだけでfine-tuneしたほうがいいという意見も.|
 |Hindi & Tamil QA papers / datasets|[URL](https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering/discussion/264344)|未確認|使えそうな外部データやpre-trainedモデルの紹介|
 |Useful Resources for the competition|[URL](https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering/discussion/264795)|Done|タイトルとは裏腹に学習データのラベルがいい加減だという指摘まとめとそこに起因する倫理的問題についてのディスカッションまとめが秀逸|
+|Comparison of the solutions of the top five teams！|[URL](https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering/discussion/289197)|Done|上位５チーム中４チームが(XLM-R,Muril,Rembert)の組合せを採用. 3チームがcharacter logits mappingによるアンサンブルを採用.|
 <br>
 
 
@@ -390,10 +392,11 @@ Fold 5 Valid Loss: 0.00000
 なんとsubmitしていたものの中に[銅メダル圏内のもの(private LB: 0.738, public LB: 0.783)](https://www.kaggle.com/riow1983/reproduction-of-0-792-notebook?scriptVersionId=77460400)があったにも関わらずfinal submitに選ぶことができなかった. というのもdead lineの直前(日本時間11月16日午前8時台)にfinal submitをどれにするか考えようと決めていたにも関わらず, 仕事に没入してしまい気付いた時は午前9時30分を回っていたという体たらく.<br>
 9割がた諦めていたとはいえ, こういう経緯でこういう結果になると想像以上の悔しさがあるということが分かった.<br>
 <br>
-3ヶ月という自分の時間の重みとsolo銅メダルを逃してしまった恨みは大きい. この失敗は無駄にしてはいけない. Kaggleへの取り組み方が甘かったと言わざるを得ない. 最終週の土日もKaggleをしなかった. 直前までfinal submitにチェックを付けていなかった. なるようにしてなった結果だと言わざるを得ない. 食らいついてさえいれば銅メダルくらいはどんなコンペでも取れるだろうということも分かった以上, 生活を見直して自分をKaggleラインのライン作業員に仕立て上げなければならない. Kaggle Masterを今後2年以内に取得するための自分の誓約は以下の通りだ:
+3ヶ月という自分の時間の重みと初のsoloメダルを逃してしまった恨みは大きい. この失敗と反省は無駄にできない. Kaggleへの取り組み方が甘かったと言わざるを得ない. 最終週の土日もKaggleをしなかった. 直前までfinal submitにチェックを付けていなかった. なるようにしてなった結果だと言わざるを得ない. 食らいついてさえいれば銅メダルくらいはどんなコンペでも取れるだろうということも分かった以上, 生活を見直して自分をKaggleラインのライン作業員に仕立て上げなければならない. Kaggle Masterを今後2年以内に取得するための自分の誓約は以下の通りだ:
 - 休憩時間の活動を, 目を使わない活動と目を使う活動に二分する
 - 休憩時間に目を使う活動をする場合, その冒頭はどんな状態であっても必ずKaggleをやる. その後気が散って別のことをやり出すのは一向に構わない.
-- 休憩時間にKaggleをやる気がしない場合は, 目を使わない活動に費やす.
+- Kaggleをやる気がしない場合は, 休憩時間であっても目を使う活動はしない.
+- Colab Pro+ 契約する.
 
 
 

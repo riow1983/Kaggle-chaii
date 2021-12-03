@@ -145,6 +145,7 @@ df.groupby('ip_address')['malware_type'].agg(md)
 |pandasでjsonlを扱いたい時|[URL](https://qiita.com/meshidenn/items/3ff72396fe85044bc74f)|Done|jsonlとは|
 |エラーを出さずに最頻値を得たいとき|[URL](https://qiita.com/tmitani/items/bd77eb08f1da7c283fed)|Done|statistics.modeではエラーになる局面もcollections.Counterで解決可能|
 |EMアルゴリズム徹底解説|[URL](https://qiita.com/kenmatsu4/items/59ea3e5dfa3d4c161efb)|Reading|-|
+|Soft and Hard EM (Expectation Maximization)|[URL](https://stats.stackexchange.com/questions/4685/soft-and-hard-em-expectation-maximization)|Done|-|
 <br>
 
 

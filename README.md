@@ -124,8 +124,7 @@ df.groupby('ip_address')['malware_type'].agg(md)
 |Unsupervised Cross-lingual Representation Learning at Scale|[URL](https://arxiv.org/pdf/1911.02116.pdf)|未読|XLM-RoBERTaの論文|
 |RETHINKING EMBEDDING COUPLING IN PRE-TRAINED LANGUAGE MODELS|[URL](https://openreview.net/pdf?id=xpFFI_NtgpW)|未読|mBERTの改良版"RemBERT"の論文.<br>XLM-RoBERTaを凌駕. [ディスカッション](https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering/discussion/267827)で取り上げられている.|
 |WECHSEL: Effective initialization of subword embeddings for cross-lingual transfer of monolingual language models|[URL](https://openreview.net/forum?id=JcfISE1-u4)|Done|単言語モデルとしてソース言語からターゲット言語に転移させる新方式.多言語モデルを凌駕.<br>本コンペでも終盤に上位チームが採用. 今後のデファクトスタンダードになるか注目.|
-|A Discrete Hard EM Approach for
-Weakly Supervised Question Answering|[URL](https://aclanthology.org/D19-1284.pdf)|Reading|答えだけ与えられ, 導出論理が欠損した不完全データとしてのQAタスクを,<br>弱学習器による導出論理の予測結果をhard-EMアルゴリズムで収束させる手法が提案されており<br>本コンペでも本提案手法がフィットするとした[上位チーム](https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering/discussion/287940)が存在した.|
+|A Discrete Hard EM Approach for Weakly Supervised Question Answering|[URL](https://aclanthology.org/D19-1284.pdf)|Reading|答えだけ与えられ, 導出論理が欠損した不完全データとしてのQAタスクを,<br>弱学習器による導出論理の予測結果をhard-EMアルゴリズムで収束させる手法が提案されており<br>本コンペでも本提案手法がフィットするとした[上位チーム](https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering/discussion/287940)が存在した.|
 |A Mutual Information Maximization Approach for the Spurious Solution Problem in Weakly Supervised Question Answering|[URL](https://arxiv.org/pdf/2106.07174.pdf)|Reading|QAタスクにおいて答えのみが与えられ, 導出論理は与えられない状況を弱教師あり学習だとして,<br> 間違った導出論理のもとたまたま正解するようなモデルの誕生を回避する手法を提案.<br>こちらも[上位チーム](https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering/discussion/287940)が参考にしようとしたが実装できたわけではない.|
 <br>
 

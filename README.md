@@ -123,7 +123,11 @@ df.groupby('ip_address')['malware_type'].agg(md)
 |BERT Based Multilingual Machine Comprehension in English and Hindi|[URL](https://arxiv.org/pdf/2006.01432.pdf)|未読|-|
 |Unsupervised Cross-lingual Representation Learning at Scale|[URL](https://arxiv.org/pdf/1911.02116.pdf)|未読|XLM-RoBERTaの論文|
 |RETHINKING EMBEDDING COUPLING IN PRE-TRAINED LANGUAGE MODELS|[URL](https://openreview.net/pdf?id=xpFFI_NtgpW)|未読|mBERTの改良版"RemBERT"の論文.<br>XLM-RoBERTaを凌駕. [ディスカッション](https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering/discussion/267827)で取り上げられている.|
-|WECHSEL: Effective initialization of subword embeddings for cross-lingual transfer of monolingual language models|[URL](https://openreview.net/forum?id=JcfISE1-u4)|Done|単言語モデルとしてソース言語からターゲット言語に転移さる新方式.多言語モデルを凌駕.<br>本コンペでも終盤に上位チームが採用. 今後のデファクトスタンダードになるか注目.|
+|WECHSEL: Effective initialization of subword embeddings for cross-lingual transfer of monolingual language models|[URL](https://openreview.net/forum?id=JcfISE1-u4)|Done|単言語モデルとしてソース言語からターゲット言語に転移させる新方式.多言語モデルを凌駕.<br>本コンペでも終盤に上位チームが採用. 今後のデファクトスタンダードになるか注目.|
+|A Discrete Hard EM Approach for
+Weakly Supervised Question Answering|[URL](https://aclanthology.org/D19-1284.pdf)|答えだけ与えられ, 導出論理が欠損した不完全データとしてのQAタスクを,<br>弱学習器による導出論理の予測結果をhard-EMアルゴリズムで収束させる手法が提案されており<br>本コンペでも本提案手法がフィットするとした[上位チーム](https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering/discussion/287940)が存在した.|
+|A Mutual Information Maximization Approach for
+the Spurious Solution Problem in Weakly Supervised Question Answering|[URL](https://arxiv.org/pdf/2106.07174.pdf)|Reading|QAタスクにおいて答えのみが与えられ, 導出論理は与えられない状況を弱教師あり学習だとして,<br> 間違った導出論理のもとたまたま正解するようなモデルの誕生を回避する手法を提案.<br>こちらも[上位チーム](https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering/discussion/287940)が参考にしようとしたが実装できたわけではない.|
 <br>
 
 
@@ -142,6 +146,7 @@ df.groupby('ip_address')['malware_type'].agg(md)
 |HTML 特殊文字|[URL](https://qiita.com/inabe49/items/303afa114b0204da8a24)|Done|矢印やギリシア文字などの記法集|
 |pandasでjsonlを扱いたい時|[URL](https://qiita.com/meshidenn/items/3ff72396fe85044bc74f)|Done|jsonlとは|
 |エラーを出さずに最頻値を得たいとき|[URL](https://qiita.com/tmitani/items/bd77eb08f1da7c283fed)|Done|statistics.modeではエラーになる局面もcollections.Counterで解決可能|
+|EMアルゴリズム徹底解説|[URL](https://qiita.com/kenmatsu4/items/59ea3e5dfa3d4c161efb)|Reading|-|
 <br>
 
 
@@ -178,6 +183,7 @@ df.groupby('ip_address')['malware_type'].agg(md)
 |(PyTorch) How to slice a BatchEncoding object into desired batch sizes?|[URL](https://github.com/huggingface/tokenizers/issues/577)|Done|`tokenizer`はbatchにしたtextを受け取れる仕様|
 |IndicBERT|[URL](https://github.com/AI4Bharat/indic-bert)|未確認|[ai4bharat/indic-bert](https://huggingface.co/ai4bharat/indic-bert)にfine-tuneing cliが付いたもの(?)|
 |Visualize your 🤗 Hugging Face data with 🏋‍♀️ Weights & Biases|[URL](https://github.com/wandb/examples/blob/master/colabs/huggingface/Visualize_your_Hugging_Face_data_with_Weights_%26_Biases.ipynb)|実行エラー|Colabで実行してみたがデータのロードでエラーが出る|
+|guchio3/kaggle-chaii-2021|[URL](https://github.com/guchio3/kaggle-chaii-2021)|確認中|Dockerを使った分析環境, W&Bを使った実験管理方法が参考になりそう|
 <br>
 
 #### Hugging Face Platform
